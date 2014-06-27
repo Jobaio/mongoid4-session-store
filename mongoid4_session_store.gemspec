@@ -1,7 +1,7 @@
 require File.expand_path('../lib/mongo_session_store/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = "mongo_session_store-rails3"
+  s.name = "mongoid4_session_store"
   s.version = MongoSessionStore::VERSION
 
   s.authors          = ["Brian Hempel", "Nicolas M\303\251rouze", "Tony Pitale", "Chris Brickley"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage         = "http://github.com/brianhempel/mongo_session_store"
   s.require_paths    = ["lib"]
   s.rubygems_version = "1.3.7"
-  s.summary          = "Rails session stores for MongoMapper, Mongoid, or any other ODM. Rails 3.1 and 3.2 compatible."
+  s.summary          = "Rails session stores for Mongoid4. Rails 4.0 compatible."
 
-  s.add_dependency "actionpack", ">= 3.1"
+  s.add_dependency "actionpack", ">= 4.0"
 end
