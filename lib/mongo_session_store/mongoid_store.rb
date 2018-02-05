@@ -11,7 +11,15 @@ module ActionDispatch
 
         store_in :collection => MongoSessionStore.collection_name
 
-        field :data, :type =>  BSON::Binary, :default =>  BSON::Binary.new(Marshal.dump({}),:generic)
+        field :_data, :type =>  BSON::Binary, :default =>  BSON::Binary.new(Marshal.dump({}),:generic)
+
+        def data
+          self._data
+        end
+
+        def data=(data)
+          self._data = data
+        end
 
         #attr_accessible :_id, :data
 
